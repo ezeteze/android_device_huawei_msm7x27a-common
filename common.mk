@@ -67,7 +67,7 @@ PRODUCT_COPY_FILES += \
     device/huawei/msm7x27a-common/configs/init.bcm.bt.sh:system/etc/bluetooth/init.bcm.bt.sh
 
 PRODUCT_COPY_FILES += \
-    device/huawei/msm7x27a-common/audio_policy.conf:system/etc/audio_policy.conf \
+    device/huawei/msm7x27a-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
     device/huawei/msm7x27a-common/configs/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/huawei/msm7x27a-common/configs/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/huawei/msm7x27a-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
