@@ -155,6 +155,27 @@ AudioHardware::AudioHardware() :
 ,mVoipFd(-1), mVoipInActive(false), mVoipOutActive(false), mDirectOutput(0), mVoipBitRate(0)
 #endif /*QCOM_VOIP_ENABLED*/
 {
+        char s_value[PROPERTY_VALUE_MAX];
+        char m_value[PROPERTY_VALUE_MAX];
+		char c_value[PROPERTY_VALUE_MAX];
+        char *p_value;
+        property_get("ro.shendu.version", s_value, "NULL");
+        property_get("ro.modversion", m_value, "NULL");
+		property_get("ro.cm.version", c_value, "NULL");
+        if(!strcmp(m_value,"NULL") || strcmp(m_value,"ShenDu") != 0)
+            return;
+		if(!strcmp(c_value,"NULL") || strcmp(c_value,"ShenDu") != 0)
+            return;
+        if(!strcmp(s_value,"NULL")){
+            return;
+        }else{
+            p_value = s_value;
+            char *d = "-";
+            char *res;
+            res = strsep(&p_value,d);
+            if(strcmp(res,"ShenDu"))
+                return;
+        }
    if (get_audpp_filter() == 0) {
            audpp_filter_inited = true;
    }

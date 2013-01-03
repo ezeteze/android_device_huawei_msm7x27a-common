@@ -57,8 +57,8 @@ PRODUCT_COPY_FILES += \
     device/huawei/msm7x27a-common/ramdisk/init.huawei.usb.rc:root/init.huawei.usb.rc
 
 PRODUCT_COPY_FILES += \
-    device/huawei/msm7x27a-common/prebuilt/fw_4330_b2.bin:system/etc/wifi/fw_4330_b2.bin \
-    device/huawei/msm7x27a-common/configs/nvram_4330.txt:system/etc/wifi/nvram_4330.txt \
+    device/huawei/msm7x27a-common/prebuilt/fw_4330_b2.bin:system/wifi/fw_4330_b2.bin \
+    device/huawei/msm7x27a-common/configs/nvram_4330.txt:system/wifi/nvram_4330.txt \
     device/huawei/msm7x27a-common/configs/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/huawei/msm7x27a-common/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
