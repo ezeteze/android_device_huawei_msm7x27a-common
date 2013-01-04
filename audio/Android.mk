@@ -3,7 +3,7 @@
 #AUDIO_POLICY_TEST := true
 #ENABLE_AUDIO_DUMP := true
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),c8812)
+ifeq ($(TARGET_BOARD_PLATFORM),msm7x27a)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
