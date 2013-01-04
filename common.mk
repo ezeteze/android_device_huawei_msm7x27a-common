@@ -1,5 +1,5 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, build/target/product/full_base_telephony.mk)
+
 # The GPS configuration appropriate for this device.
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 
@@ -155,3 +155,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
+
+$(call inherit-product, build/target/product/full_base_telephony.mk)
