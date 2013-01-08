@@ -2,14 +2,13 @@ import init.huawei.usb.rc
 
 on init
     mkdir /storage 0775 system sdcard_r
-    mkdir /storage/sdcard1 0000 system system
     mkdir /storage/sdcard0 0000 system system
-    export EXTERNAL_STORAGE /storage/sdcard1
+    mkdir /storage/sdcard1 0000 system system
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export INTERNAL_STORAGE /storage/sdcard1
 
-    symlink /storage/sdcard1 /mnt/sdcard
-    symlink /storage/sdcard1 /sdcard
-    symlink /storage/sdcard0 /mnt/emmc
-    symlink /storage/sdcard0 /HWUserData
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard1 /emmc
 
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -105,7 +104,7 @@ on emmc-fs
     mount ext4 /dev/block/mmcblk0p6 /cache nosuid nodev barrier=1,nodelalloc
     
     wait /dev/block/mmcblk0p19
-    mount vfat /dev/block/mmcblk0p19 /storage/sdcard0 uid=1000,gid=1015,umask=0002,utf8
+    mount vfat /dev/block/mmcblk0p19 /storage/sdcard1 uid=1000,gid=1015,umask=0002,utf8
     mount ext4 /dev/block/mmcblk0p18 /cust ro
 
     # Imported from init.msm7627a.rc
