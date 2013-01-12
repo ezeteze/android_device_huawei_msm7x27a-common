@@ -44,18 +44,11 @@ on boot
 service ueventd /sbin/ueventd
     critical
 
-service recovery /sbin/sh /sbin/charge.sh
-    oneshot
-
-service charge /sbin/charge
-    oneshot
-
-service adbd /sbin/adbd recovery
-    disabled
+service recovery /sbin/recovery
 
 service rmt_storage /sbin/rmt_storage
-    class main
-    user root
+
+service adbd /sbin/adbd recovery
     disabled
 
 service rmt_oeminfo /sbin/rmt_oeminfo

@@ -105,16 +105,19 @@ BOARD_USE_SERNUM_FOR_MAC 			:= true
 
 # Kernel 
 TARGET_KERNEL_SOURCE := kernel/huawei/G300
-BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei no_console_suspend=true
+BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 2048
 BOARD_FORCE_RAMDISK_ADDRESS := 0x01400000
 
 # Recovery
-#BOARD_TOUCH_RECOVERY := true
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/msm7x27a-common/recovery/graphics.c
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/msm7x27a-common/recovery_kernel
+BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/msm7x27a-common/recovery/graphics_cn.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/msm7x27a-common/recovery/recovery-keys.c
 TARGET_RECOVERY_INITRC := device/huawei/msm7x27a-common/recovery/etc/init.rc
+BOARD_HAS_NO_SELECT_BUTTON := true
+RECOVERY_CHARGEMODE := true
+BOARD_RECOVERY_RMT_STORAGE := true
+#BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun1/file"
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
