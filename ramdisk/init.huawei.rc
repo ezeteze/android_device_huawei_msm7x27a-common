@@ -4,6 +4,7 @@ on init
     mkdir /storage 0775 system sdcard_r
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/sdcard1 0000 system system
+    mkdir /internal_sd 0000 system system
     export EXTERNAL_STORAGE /storage/sdcard0
     export INTERNAL_STORAGE /storage/sdcard1
 
@@ -104,7 +105,7 @@ on emmc-fs
     mount ext4 /dev/block/mmcblk0p6 /cache nosuid nodev barrier=1,nodelalloc
     
     wait /dev/block/mmcblk0p19
-    mount vfat /dev/block/mmcblk0p19 /storage/sdcard1 uid=1000,gid=1015,umask=0002,utf8
+    mount vfat /dev/block/mmcblk0p19 /internal_sd uid=1000,gid=1015,umask=0002,utf8
     mount ext4 /dev/block/mmcblk0p18 /cust ro
 
     # Imported from init.msm7627a.rc
