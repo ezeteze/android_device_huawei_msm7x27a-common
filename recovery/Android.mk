@@ -1,3 +1,3 @@
-ifeq ($(TARGET_BOARD_PLATFORM),msm7x27a)
+ifeq ($(TARGET_RECOVERY_MSM7X27A),true)
 include $(call all-subdir-makefiles)
 endif
