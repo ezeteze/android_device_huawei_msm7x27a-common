@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_BOARD_PLATFORM),msm7x27a)
+ifeq ($(TARGET_MSM7X27A_COMMON),true)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
