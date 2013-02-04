@@ -106,7 +106,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_sample_period=700000 \
     dev.pm.dyn_samplingrate=1 \
-    headset.hook.delay=500
+    headset.hook.delay=500 \
+    af.resampler.quality=255
 
 # CWM
 PRODUCT_PROPERTY_OVERRIDES += \

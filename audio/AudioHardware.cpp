@@ -1595,14 +1595,13 @@ status_t AudioHardware::setVoiceVolume(float v)
         ALOGW("setVoiceVolume(%f) over 1.0, assuming 1.0\n", v);
         v = 1.0;
     }
-    // Huawei sets volume range lower, change it to 0.2
-    // Added 0.2 to current volume, as in voice call Mute cannot be set as minimum volume(0.00)
-    // setting Rx volume level as 1 for minimum and 6 as max level.
-    v = 0.2 + v;
+    // Added 0.4 to current volume, as in voice call Mute cannot be set as minimum volume(0.00)
+    // setting Rx volume level as 2 for minimum and 7 as max level.
+    v = 0.4 + v;
 
     int vol = lrint(v * 5.0);
     ALOGD("setVoiceVolume(%f)\n", v);
-    ALOGI("Setting in-call volume to %d (available range is 1 to 6)\n", vol);
+    ALOGI("Setting in-call volume to %d (available range is 2 to 7)\n", vol);
 
     if ((mCurSndDevice != -1) && ((mCurSndDevice == SND_DEVICE_TTY_HEADSET) || (mCurSndDevice == SND_DEVICE_TTY_VCO)))
     {
@@ -1642,7 +1641,7 @@ status_t AudioHardware::setMasterVolume(float v)
     int vol = ceil(v * 7.0);
     ALOGI("Set master volume to %d.\n", vol);
     set_volume_rpc(SND_DEVICE_HANDSET, SND_METHOD_VOICE, vol, m7xsnddriverfd);
-    set_volume_rpc(SND_DEVICE_SPEAKER, SND_METHOD_VOICE, vol, m7xsnddriverfd);
+    set_volume_rpc(SND_DEVICE_SPEAKER, SND_METHOD_VOICE, vol * 0.8, m7xsnddriverfd);
     set_volume_rpc(SND_DEVICE_BT,      SND_METHOD_VOICE, vol, m7xsnddriverfd);
     set_volume_rpc(SND_DEVICE_HEADSET, SND_METHOD_VOICE, vol, m7xsnddriverfd);
     set_volume_rpc(SND_DEVICE_IN_S_SADC_OUT_HANDSET, SND_METHOD_VOICE, vol, m7xsnddriverfd);
@@ -3897,7 +3896,7 @@ status_t AudioHardware::AudioSessionOutLPA::start( ) //TODO YM LPA removed start
 
         config.sample_rate = mSampleRate;
         config.channel_count = mChannels;
-        ALOGV("sample_rate=%d and channel count=%d \n", mSampleRate, mChannels);
+        //ALOGV("sample_rate=%d and channel count=%d \n", mSampleRate, mChannels);
         if ( ioctl(afd, AUDIO_SET_CONFIG, &config) < 0 ) {
             ALOGE("could not set config");
             close(afd);
