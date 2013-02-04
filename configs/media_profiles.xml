@@ -94,7 +94,7 @@
                    bitRate="5000000"
                    width="640"
                    height="480"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
@@ -105,7 +105,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -116,7 +116,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -129,7 +129,7 @@
                    bitRate="5000000"
                    width="720"
                    height="480"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
@@ -140,7 +140,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -152,7 +152,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -173,7 +173,7 @@
                    bitRate="5000000"
                    width="640"
                    height="480"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
@@ -184,7 +184,7 @@
                    bitRate="2000000"
                    width="640"
                    height="480"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
@@ -195,7 +195,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
 
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -209,7 +209,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
 
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -222,7 +222,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -234,7 +234,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="31" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -262,17 +262,17 @@
         minBitRate="64000" maxBitRate="20000000"
         minFrameWidth="176" maxFrameWidth="1920"
         minFrameHeight="144" maxFrameHeight="1088"
-        minFrameRate="1" maxFrameRate="30" />
+        minFrameRate="1" maxFrameRate="31" />
     <VideoEncoderCap name="h263" enabled="true"
         minBitRate="192000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="1280"
         minFrameHeight="144" maxFrameHeight="720"
-        minFrameRate="1" maxFrameRate="30" />
+        minFrameRate="1" maxFrameRate="31" />
     <VideoEncoderCap name="m4v" enabled="true"
         minBitRate="192000" maxBitRate="14000000"
         minFrameWidth="176" maxFrameWidth="1280"
         minFrameHeight="144" maxFrameHeight="720"
-        minFrameRate="1" maxFrameRate="30" />
+        minFrameRate="1" maxFrameRate="31" />
     <AudioEncoderCap name="amrnb" enabled="true"
         minBitRate="5525" maxBitRate="12200"
         minSampleRate="8000" maxSampleRate="8000"
