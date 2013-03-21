@@ -116,7 +116,6 @@ BOARD_FORCE_RAMDISK_ADDRESS := 0x01400000
 
 # Custom releasetools for old partition table.
 TARGET_PROVIDES_RELEASETOOLS := true
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/huawei/msm7x27a-common/releasetools/ota_from_target_files
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT		:= RGBX_8888
