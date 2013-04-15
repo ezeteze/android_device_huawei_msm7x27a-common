@@ -64,8 +64,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/huawei/msm7x27a-common/prebuilt/BCM4330.hcd:system/etc/bluetooth/BCM4330.hcd \
-    device/huawei/msm7x27a-common/configs/init.bcm.bt.sh:system/etc/bluetooth/init.bcm.bt.sh \
-    device/huawei/msm7x27a-common/configs/89uncapfps:system/etc/init.d/89uncapfps
+    device/huawei/msm7x27a-common/configs/init.bcm.bt.sh:system/etc/bluetooth/init.bcm.bt.sh
 
 PRODUCT_COPY_FILES += \
     device/huawei/msm7x27a-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
