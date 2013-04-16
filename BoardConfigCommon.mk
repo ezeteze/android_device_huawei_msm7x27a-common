@@ -120,7 +120,6 @@ TARGET_PROVIDES_RELEASETOOLS := true
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT		:= RGBX_8888
 TARGET_PREBUILT_RECOVERY_KERNEL 	:= device/huawei/msm7x27a-common/recovery_kernel
-BOARD_CUSTOM_GRAPHICS 				:= ../../../device/huawei/msm7x27a-common/recovery/graphics_cn.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING 	:= ../../device/huawei/msm7x27a-common/recovery/recovery-keys.c
 TARGET_RECOVERY_INITRC 				:= device/huawei/msm7x27a-common/recovery/etc/init.rc
 BOARD_HAS_NO_SELECT_BUTTON 			:= true
