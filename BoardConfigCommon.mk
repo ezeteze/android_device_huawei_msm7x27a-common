@@ -118,7 +118,7 @@ BOARD_FORCE_RAMDISK_ADDRESS := 0x01400000
 TARGET_PROVIDES_RELEASETOOLS := true
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT		:= RGBX_8888
+TARGET_RECOVERY_PIXEL_FORMAT		:= "RGBX_8888"
 TARGET_PREBUILT_RECOVERY_KERNEL 	:= device/huawei/msm7x27a-common/recovery_kernel
 BOARD_CUSTOM_RECOVERY_KEYMAPPING 	:= ../../device/huawei/msm7x27a-common/recovery/recovery-keys.c
 TARGET_RECOVERY_INITRC 				:= device/huawei/msm7x27a-common/recovery/etc/init.rc
