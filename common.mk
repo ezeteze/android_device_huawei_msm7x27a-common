@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
 
 # Other HALs
 PRODUCT_PACKAGES += \
-    power.huawei \
     gps.msm7x27a \
     lights.msm7x27a
 
@@ -96,49 +95,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-    
+
 # Modules
 PRODUCT_COPY_FILES += \
-	device/huawei/msm7x27a-common/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
 	device/huawei/msm7x27a-common/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
-	device/huawei/msm7x27a-common/modules/dal_remotetest.ko:system/lib/modules/dal_remotetest.ko \
-	device/huawei/msm7x27a-common/modules/evbug.ko:system/lib/modules/evbug.ko \
-	device/huawei/msm7x27a-common/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
-	device/huawei/msm7x27a-common/modules/lcd.ko:system/lib/modules/lcd.ko \
-	device/huawei/msm7x27a-common/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
-	device/huawei/msm7x27a-common/modules/max2165.ko:system/lib/modules/max2165.ko \
-	device/huawei/msm7x27a-common/modules/mc44s803.ko:system/lib/modules/mc44s803.ko \
-	device/huawei/msm7x27a-common/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
-	device/huawei/msm7x27a-common/modules/mt20xx.ko:system/lib/modules/mt20xx.ko \
-	device/huawei/msm7x27a-common/modules/mt2060.ko:system/lib/modules/mt2060.ko \
-	device/huawei/msm7x27a-common/modules/mt2131.ko:system/lib/modules/mt2131.ko \
-	device/huawei/msm7x27a-common/modules/mt2266.ko:system/lib/modules/mt2266.ko \
-	device/huawei/msm7x27a-common/modules/mtd_erasepart.ko:system/lib/modules/mtd_erasepart.ko \
-	device/huawei/msm7x27a-common/modules/mtd_nandecctest.ko:system/lib/modules/mtd_nandecctest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_oobtest.ko:system/lib/modules/mtd_oobtest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_pagetest.ko:system/lib/modules/mtd_pagetest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_readtest.ko:system/lib/modules/mtd_readtest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_speedtest.ko:system/lib/modules/mtd_speedtest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_stresstest.ko:system/lib/modules/mtd_stresstest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_subpagetest.ko:system/lib/modules/mtd_subpagetest.ko \
-	device/huawei/msm7x27a-common/modules/mtd_torturetest.ko:system/lib/modules/mtd_torturetest.ko \
-	device/huawei/msm7x27a-common/modules/mxl5005s.ko:system/lib/modules/mxl5005s.ko \
-	device/huawei/msm7x27a-common/modules/mxl5007t.ko:system/lib/modules/mxl5007t.ko \
-	device/huawei/msm7x27a-common/modules/qt1010.ko:system/lib/modules/qt1010.ko \
 	device/huawei/msm7x27a-common/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
-	device/huawei/msm7x27a-common/modules/tda827x.ko:system/lib/modules/tda827x.ko \
-	device/huawei/msm7x27a-common/modules/tda8290.ko:system/lib/modules/tda8290.ko \
-	device/huawei/msm7x27a-common/modules/tda9887.ko:system/lib/modules/tda9887.ko \
-	device/huawei/msm7x27a-common/modules/tda18212.ko:system/lib/modules/tda18212.ko \
-	device/huawei/msm7x27a-common/modules/tda18218.ko:system/lib/modules/tda18218.ko \
-	device/huawei/msm7x27a-common/modules/tda18271.ko:system/lib/modules/tda18271.ko \
-	device/huawei/msm7x27a-common/modules/tea5761.ko:system/lib/modules/tea5761.ko \
-	device/huawei/msm7x27a-common/modules/tea5767.ko:system/lib/modules/tea5767.ko \
-	device/huawei/msm7x27a-common/modules/tuner-simple.ko:system/lib/modules/tuner-simple.ko \
-	device/huawei/msm7x27a-common/modules/tuner-types.ko:system/lib/modules/tuner-types.ko \
-	device/huawei/msm7x27a-common/modules/tuner-xc2028.ko:system/lib/modules/tuner-xc2028.ko \
-	device/huawei/msm7x27a-common/modules/xc5000.ko:system/lib/modules/xc5000.ko
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -157,8 +118,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dexopt-data-only=1 \
-    dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapgrowthlimit=36m \
     dalvik.vm.heapsize=128m \
     dalvik.vm.heapstartsize=5m \
@@ -197,6 +156,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=180
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)

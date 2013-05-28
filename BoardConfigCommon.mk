@@ -109,7 +109,7 @@ BOARD_USE_SERNUM_FOR_MAC 			:= true
 
 # Kernel 
 #TARGET_KERNEL_SOURCE := kernel/huawei/G300
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-eabi-4.7
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-eabi-4.7
 BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 2048
