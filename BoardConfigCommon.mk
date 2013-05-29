@@ -35,7 +35,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/huawei/msm7x27a-common/include
 
 # Audio
 TARGET_PROVIDES_LIBAUDIO := true
-
+COMMON_GLOBAL_CFLAGS += -DQCOM_VOIP_ENABLED
 # Lights
 TARGET_USE_HUAWEI_LIBLIGHTS := true
 
@@ -108,7 +108,7 @@ BOARD_LEGACY_NL80211_STA_EVENTS		:= true
 BOARD_USE_SERNUM_FOR_MAC 			:= true
 
 # Kernel 
-#TARGET_KERNEL_SOURCE := kernel/huawei/G300
+TARGET_KERNEL_SOURCE := kernel/huawei/G300
 BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 2048
@@ -119,7 +119,7 @@ TARGET_PROVIDES_RELEASETOOLS := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT		:= "RGBX_8888"
-TARGET_PREBUILT_RECOVERY_KERNEL 	:= device/huawei/msm7x27a-common/recovery_kernel
+#TARGET_PREBUILT_RECOVERY_KERNEL 	:= device/huawei/msm7x27a-common/recovery_kernel
 BOARD_CUSTOM_RECOVERY_KEYMAPPING 	:= ../../device/huawei/msm7x27a-common/recovery/recovery-keys.c
 TARGET_RECOVERY_INITRC 				:= device/huawei/msm7x27a-common/recovery/etc/init.rc
 BOARD_HAS_NO_SELECT_BUTTON 			:= true

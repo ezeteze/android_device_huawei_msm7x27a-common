@@ -1,7 +1,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The GPS configuration appropriate for this device.
-$(call inherit-product, device/common/gps/gps_as_supl.mk)
+$(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 $(call inherit-product-if-exists, vendor/huawei/msm7x27a-common/msm7x27a-common-vendor.mk)
 
@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs \
     e2fsck \
-    com.android.future.usb.accessory 
+    com.android.future.usb.accessory \
+    Torch
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
