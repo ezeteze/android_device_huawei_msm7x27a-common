@@ -47,7 +47,7 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
     com.android.future.usb.accessory \
-    Torch
+    Torch 
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
